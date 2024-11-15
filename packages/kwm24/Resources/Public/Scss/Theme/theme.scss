@@ -1,0 +1,15 @@
+//
+// Variables
+//
+@import "variables";
+
+//
+// Import needed Bootstrap Package Files
+//
+@import "EXT:bootstrap_package/Resources/Public/Scss/bootstrap5/theme";
+
+@import "card";
+
+#page-header{
+  background-color: blueviolet !important;
+}
