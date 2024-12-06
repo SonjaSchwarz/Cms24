@@ -42,7 +42,8 @@
 		"b13/container": "^2",
 		"jweiland/sync-crop-areas": "^3",
 		"fh-hagenberg/kwm24": "dev-main",
-		"mask/mask": "^8"
+		"mask/mask": "^8",
+		"georgringer/news": "^11"
 	},
 	"repositories": [
 		{"type": "composer","url": "https://composer.typo3.org/"},

@@ -30,24 +30,14 @@ page {
 }
 
 lib.maskContentElement {
-
     templateRootPaths {
-
         5 = EXT:bootstrap_package/Resources/Private/Templates/ContentElements
-
     }
-
     partialRootPaths {
-
         5 = EXT:bootstrap_package/Resources/Private/Partials/ContentElements
-
     }
-
     layoutRootPaths {
-
         5 = EXT:bootstrap_package/Resources/Private/Layouts/ContentElements
-
     }
-
 }
 
