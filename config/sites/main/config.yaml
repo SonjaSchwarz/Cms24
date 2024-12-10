@@ -10,5 +10,17 @@ languages:
     flag: at
     hreflang: ''
     websiteTitle: ''
+  -
+    title: Englisch
+    enabled: true
+    locale: en_US
+    hreflang: en-Us
+    base: /en/
+    websiteTitle: Farming
+    navigationTitle: EN
+    fallbackType: strict
+    fallbacks: ''
+    flag: us
+    languageId: 1
 rootPageId: 1
-websiteTitle: 'Landwirtschaft'
+websiteTitle: Landwirtschaft
