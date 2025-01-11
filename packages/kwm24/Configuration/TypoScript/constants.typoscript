@@ -60,3 +60,7 @@ plugin.bootstrap_package.settings.scss {
     primary = #eb3e4a
     secondary = #013859
 }
+
+plugin.tx_felogin_login.view.templateRootPath = EXT:kwm24/Resources/Private/Templates/LoginExt/
+plugin.tx_felogin_login.view.partialRootPath =EXT:kwm24/Resources/Private/Partials/LohinExt/
+plugin.tx_felogin_login.view.layoutRootPath = EXT:kwm24/Resources/Private/Templates/LohinExt/
