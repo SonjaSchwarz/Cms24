@@ -1,0 +1,20 @@
+@import 'EXT:femanager/Configuration/TypoScript/Main/setup.typoscript'
+
+lib.record = RECORDS
+lib.record {
+    source.data = current:1
+    source.intval = 1
+    tables = tt_content
+}
+
+page = PAGE
+page {
+    10 = FLUIDTEMPLATE
+    10 {
+        variables {
+            isLoggedIn = TEXT
+            isLoggedIn.data = TSFE:fe_user|user|username
+            isLoggedIn.ifEmpty = 0
+        }
+    }
+}

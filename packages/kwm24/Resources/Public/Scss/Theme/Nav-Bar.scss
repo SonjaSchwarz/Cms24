@@ -1,0 +1,40 @@
+.navbar-mainnavigation .nav-link:not(.nav-link-toggle):before{
+  background-color:rgb(67,106,94);
+}
+
+.navbar-mainnavigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.nav-item {
+  flex: 1;
+  text-align: center;
+}
+
+
+/* Hauptnavigation
+//So mittig gefällt mir das Menü doch nicht :)
+.navbar-mainnavigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-item {
+  flex: 1;
+  text-align: center;
+}
+
+
+.nav-link-text {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size:20px;
+}
+
+ */

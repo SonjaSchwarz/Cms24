@@ -1,0 +1,69 @@
+@import 'EXT:femanager/Configuration/TypoScript/Main/constants.typoscript'
+
+// FEManager Plugin
+plugin.tx_femanager {
+    view {
+        templateRootPaths {
+            0 = EXT:femanager/Resources/Private/Templates/
+            1 = EXT:kwm24/Resources/Private/Templates/FeManager
+        }
+        partialRootPaths {
+            0 = EXT:femanager/Resources/Private/Partials/
+            1 = EXT:kwm24/Resources/Private/Partials/FeManager
+        }
+        layoutRootPaths {
+            0 = EXT:femanager/Resources/Private/Layouts/
+            1 = EXT:kwm24/Resources/Private/Layouts/FeManager
+        }
+    }
+    persistence {
+        storagePid = 13
+    }
+    settings {
+        ###################################
+        # Settings for user registration
+        ###################################
+        new {
+            # take username and copy it to the email field (so email field is not necessary in FE)
+            # fillEmailWithUsername = 1
+
+            # login after profile creation
+            login = 1
+
+            # validation of user input values
+            # possible validations for each field are: required, email, min, max, intOnly, lettersOnly, unicodeLettersOnly, uniqueInPage, uniqueInDb, date, mustInclude(number,letter,special,space,uppercase), mustNotInclude(number,letter,uppercase,special,space), inList(1,2,3), captcha, sameAs(password)
+            validation {
+                # Enable clientside Formvalidation (JavaScript)
+                _enable.client = 1
+
+                # Enable serverside Formvalidation (PHP)
+                _enable.server = 1
+
+                username {
+                    required = 1
+                    uniqueInDb = 1
+                    mustNotInclude = space
+                }
+                email {
+                    required = 0
+                    email = 1
+                    uniqueInPage = 1
+                }
+                password {
+                    required = 1
+                    #min = 10
+                    #mustInclude = number,letter,special
+                }
+                password_repeat {
+                    required = 1
+                    sameAs = password
+                }
+            }
+        }
+    }
+}
+
+// internal FELogin plugin
+plugin.tx_felogin_login.view.layoutRootPaths = EXT:kwm24/Resources/Private/Layouts/FeLogin
+plugin.tx_felogin_login.view.templateRootPath = EXT:kwm24/Resources/Private/Templates/FeLogin
+plugin.tx_felogin_login.view.partialRootPath = EXT:kwm24/Resources/Private/Partials/FeLogin

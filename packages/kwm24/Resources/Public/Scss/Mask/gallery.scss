@@ -1,0 +1,49 @@
+.masonry-grid {
+  display: grid; /* Grid-Layout */
+  grid-template-columns: repeat(3, 300px); /* Drei Spalten, jede 200px breit */
+  gap: 5em; /* Abstand zwischen den Bildern */
+  justify-content: center; /* Zentriere die Bilder in der Mitte */
+  padding: 2em; /* Abstand zu den Seitenrändern */
+}
+
+.masonry-item {
+  position: relative;
+  overflow: hidden; /* Überschüssige Bildteile abschneiden */
+  width: 100%; /* Fülle die Spaltenbreite */
+  padding-top: 100%; /* Höhe = Breite (quadratisch) */
+  border: 2px solid rgba(226, 219, 190, 1); /* Dünner Rahmen */
+  border-radius: 5px; /* Optional: Abgerundete Ecken */
+  background: #fff; /* Weißer Hintergrund */
+}
+
+.masonry-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Fülle den Container */
+  height: 100%; /* Fülle den Container */
+  object-fit: cover; /* Zuschneiden und Zentrieren des Bildes */
+  margin: 0;
+}
+
+.masonry-item {
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.masonry-item:hover {
+
+  transform: scale(1.05); /* Bild leicht vergrößern */
+}
+
+.masonry-grid a {
+  text-decoration: none; /* Entferne Unterstriche bei Links */
+}
+
+.fancybox__slide {
+  background: rgba(255, 255, 255, 0.4); /* Weißer Hintergrund mit 70% Deckkraft */
+}
+
+.fancybox__container{
+  --fancybox-bg: rgba(255, 255, 255, 0.4);
+  --f-button-bg:  rgba(255, 255, 255, 0.4);
+}

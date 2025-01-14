@@ -9,11 +9,14 @@
 ##############
 page {
     includeCSS {
+        swiper = https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css
         theme = EXT:kwm24/Resources/Public/Scss/Theme/theme.scss
+        fancybox = EXT:kwm24/Resources/Public/Css/fancybox.min.css
+        mask = EXT:kwm24/Resources/Public/Scss/Mask/mask.scss
     }
 
     includeJSLibs {
-
+        jQuery = https://code.jquery.com/jquery-3.6.0.min.js
     }
 
     includeJS {
@@ -25,7 +28,10 @@ page {
     }
 
     includeJSFooter {
+        swiper = https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js
         kwm24_scripts = EXT:kwm24/Resources/Public/JavaScript/Dist/scripts.js
+        fancybox = EXT:kwm24/Resources/Public/JavaScript/Src/fancybox.min.js
+        main = EXT:kwm24/Resources/Public/JavaScript/Src/main.js
     }
 }
 
