@@ -78,7 +78,7 @@
 .fancybox__info .btn {
   margin-top: auto ; //Abstand Text und Button
   padding: 10px 20px ;
-  background-color: #7b8b99 ;
+  background-color: rgb(67,106,94);
   color: rgba(225, 218, 193, 1);
   text-decoration: none;
   align-self: flex-start; //unten
@@ -106,6 +106,9 @@
   font-size: 16px !important;
 }
 
+.f-button{
+  color: rgb(67,106,94)
+}
 
 
 
