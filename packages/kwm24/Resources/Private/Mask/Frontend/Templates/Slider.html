@@ -1,0 +1,44 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+<f:section name="Main">
+    <!-- Slider main container -->
+    <f:if condition="{data.tx_mask_slider}">
+        <div class="swiper">
+            <!-- Wrapper für die Slides -->
+
+            <div class="swiper-wrapper">
+                <f:for each="{data.tx_mask_slider}" as="data_item">
+                    <div class="swiper-slide">
+                        <div class="card">
+                        <!-- Iteriere durch die Bilder in jedem Slide -->
+                        <f:for each="{data_item.tx_mask_image}" as="file">
+                            <!-- Bild einfügen -->
+                            <div class="Slider IMG">
+                            <f:media file="{file}" width="300"/>
+                            </div>
+                            <!-- Beschreibung einfügen -->
+                            <div class="description">
+                                {file.description}
+                            </div>
+                        </f:for>
+
+                        <!-- Zusätzlicher Text -->
+                        <f:if condition="{data_item.tx_mask_text}">
+                            <div class="slide-text">
+                                {data_item.tx_mask_text -> f:format.html()}
+                            </div>
+                        </f:if>
+                        </div>
+                    </div>
+                </f:for>
+            </div>
+
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Navigation -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </f:if>
+</f:section>
+</html>

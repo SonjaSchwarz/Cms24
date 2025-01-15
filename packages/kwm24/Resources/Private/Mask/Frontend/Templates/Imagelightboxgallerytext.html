@@ -1,0 +1,41 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers" data-namespace-typo3-fluid="true">
+
+
+
+<f:if condition="{data.tx_mask_images}">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="masonry-grid">
+                    <f:for each="{data.tx_mask_images}" as="file">
+                        <a
+                                class="masonry-grid-item"
+                                data-src="{f:uri.image(image: file, maxWidth: 400)}"
+                                data-fancybox="gallery"
+                                data-html='
+                             <div class="fancybox__content">
+                                 <div class="fancybox__image">
+                                     <img src="{f:uri.image(image: file, maxWidth: 400)}" alt="{file.alternative}">
+                                 </div>
+                                 <div class="fancybox__info">
+                                     <h2>{file.title}</h2>
+                                     <p>{file.description}</p>
+                                     <a href="{f:uri.image(image: file)}" class="btn" download>DOWNLOAD</a>
+                                 </div>
+                             </div>'
+                        >
+                            <img
+                                    src="{f:uri.image(image: file, maxWidth: 400)}"
+                                    alt="{file.alternative}"
+                                    loading="lazy"
+                            />
+                            <h3>{file.title}</h3>
+                            <p class="image-description">{file.description}</p>
+                        </a>
+                    </f:for>
+                </div>
+            </div>
+        </div>
+    </div>
+</f:if>
+</html>
