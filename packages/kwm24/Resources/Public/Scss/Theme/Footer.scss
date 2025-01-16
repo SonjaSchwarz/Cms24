@@ -3,3 +3,13 @@
   link-color: #ffff;
 
 }
+
+.frame a:not([class]) {
+  color: white !important;
+  text-decoration: none;
+}
+
+.frame a:not([class]):hover {
+  text-decoration: underline; /* Unterstreicht das Element beim Hover */
+}
+

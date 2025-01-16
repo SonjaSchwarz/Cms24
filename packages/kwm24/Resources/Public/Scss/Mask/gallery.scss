@@ -1,6 +1,6 @@
 .masonry-grid {
   display: grid; /* Grid-Layout */
-  grid-template-columns: repeat(3, 300px); /* Drei Spalten, jede 200px breit */
+  grid-template-columns: repeat(3, 300px); /* Standard: Drei Spalten, jede 300px breit */
   gap: 5em; /* Abstand zwischen den Bildern */
   justify-content: center; /* Zentriere die Bilder in der Mitte */
   padding: 2em; /* Abstand zu den Seitenrändern */
@@ -29,7 +29,6 @@
 }
 
 .masonry-item:hover {
-
   transform: scale(1.05); /* Bild leicht vergrößern */
 }
 
@@ -41,7 +40,39 @@
   background: rgba(255, 255, 255, 0.4); /* Weißer Hintergrund mit 70% Deckkraft */
 }
 
-.fancybox__container{
+.fancybox__container {
   --fancybox-bg: rgba(255, 255, 255, 0.4);
-  --f-button-bg:  rgba(255, 255, 255, 0.4);
+  --f-button-bg: rgba(255, 255, 255, 0.4);
 }
+
+.fancybox__container img {
+  border: none;
+  border-radius: 5px;
+}
+
+/* Responsivität für kleinere Bildschirme */
+@media (max-width: 1200px) {
+  .masonry-grid {
+    grid-template-columns: repeat(2, 1fr); /* Zwei Spalten */
+    gap: 3em; /* Weniger Abstand zwischen den Bildern */
+  }
+}
+
+@media (max-width: 768px) {
+  .masonry-grid {
+    grid-template-columns: 1fr; /* Eine Spalte auf kleinen Bildschirmen */
+    gap: 2em; /* Weniger Abstand */
+  }
+
+  .fancybox__slide {
+    background: rgba(255, 255, 255, 0.7); /* Hellerer Hintergrund für kleinere Bildschirme */
+  }
+}
+
+@media (max-width: 480px) {
+  .masonry-grid {
+    padding: 1em; /* Weniger Padding für sehr kleine Bildschirme */
+  }
+}
+
+.down

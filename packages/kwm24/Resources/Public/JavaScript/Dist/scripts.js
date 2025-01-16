@@ -1,18 +1,12 @@
 
-
+//Slider JS
 const swiper = new Swiper('.swiper', {
 
     // Optional parameters
-    centeredSlides: true,
-    slidesPerView: 3,
+    centeredSlides: false, //Erstes eingefügtes Elment is ganz links
+    slidesPerView: 3, //angezeigte Elemente
     spaceBetween: 30,
     loop: true,
-
-
-    // Wenn du eine Pagination benötigst
-    pagination: {
-        el: '.swiper-pagination',
-    },
 
     // Navigation arrows
     navigation: {

@@ -1,0 +1,39 @@
+//LogIn//
+#c30 {
+  background-color: rgba(225, 218, 193, 1);
+  display: flex;               /* Aktiviert Flexbox */
+  justify-content: center;     /* Zentriert den Inhalt horizontal */
+  align-items: center;         /* Zentriert den Inhalt vertikal */
+  height: 100%;                /* Optional, falls Höhe definiert ist */
+  text-align: center;          /* Zentriert Text */
+  padding: 20px 10px;          /* Innenabstand: oben/unten 20px, links/rechts 10px */
+  border-radius: 5px;
+  border: rgba(226, 219, 190, 1);
+}
+
+//Registrieren//
+#c35 {
+  background-color: rgba(225, 218, 193, 1);
+  padding: 20px 10px;          /* Innenabstand: oben/unten 20px, links/rechts 10px */
+  border-radius: 5px;
+  border: rgba(226, 219, 190, 1);
+}
+
+//Kontakt//
+//////////
+#c36 {
+  background-color: rgba(225, 218, 193, 1);
+  padding: 40px 40px 40px 40px;          /* Innenabstand: oben/unten 20px, links/rechts 10px */
+  border-radius: 5px;
+  border: rgba(226, 219, 190, 1);
+}
+
+.form-control{
+  background-color: beige; /*Eingabefelder in Kontaktformular*/
+}
+
+.form-select{
+  background-color: beige; /*Farbe Drop Down Kontakt */
+}
+
+

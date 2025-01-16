@@ -1,16 +1,24 @@
-.navbar-mainnavigation .nav-link:not(.nav-link-toggle):before{
-  background-color:rgb(67,106,94);
-}
-
 .navbar-mainnavigation {
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Zentriere Inhalte vertikal */
   width: 100%;
 }
+
 .nav-item {
   flex: 1;
   text-align: center;
+  display: flex; /* Flexbox für den Nav-Item-Container */
+  align-items: center; /* Zentriere Inhalte vertikal */
+  justify-content: center; /* Zentriere Inhalte horizontal */
 }
+
+.nav-link {
+  display: inline-block; /* Sicherstellen, dass es ein Inline-Block ist */
+  line-height: normal; /* Standardmäßige Line-Height */
+  padding: 10px 15px; /* Falls nötig: Abstand hinzufügen */
+}
+
 
 
 /* Hauptnavigation

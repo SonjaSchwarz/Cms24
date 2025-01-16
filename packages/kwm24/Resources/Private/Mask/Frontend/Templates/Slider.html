@@ -9,7 +9,7 @@
             <div class="swiper-wrapper">
                 <f:for each="{data.tx_mask_slider}" as="data_item">
                     <div class="swiper-slide">
-                        <div class="card">
+                        <div class="card"> <!-- Card klasse hinzugefügt, damit Sliderelemente das Aussehen von Cards haben -->
                         <!-- Iteriere durch die Bilder in jedem Slide -->
                         <f:for each="{data_item.tx_mask_image}" as="file">
                             <!-- Bild einfügen -->
@@ -33,8 +33,6 @@
                 </f:for>
             </div>
 
-            <!-- Pagination -->
-            <div class="swiper-pagination"></div>
             <!-- Navigation -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
